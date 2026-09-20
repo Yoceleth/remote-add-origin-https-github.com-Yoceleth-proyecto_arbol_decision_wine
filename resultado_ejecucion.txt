@@ -1,0 +1,179 @@
+CLASIFICACIÓN CON ÁRBOL DE DECISIÓN - WINE DATASET
+Dataset: 178 muestras, 13 características y 3 clases.
+
+======================================================================
+max_depth = 2
+Precisión en datos de prueba: 0.8611 (86.11%)
+
+Reglas aprendidas:
+|--- color_intensity <= 3.82
+|   |--- ash <= 3.00
+|   |   |--- class: 1
+|   |--- ash >  3.00
+|   |   |--- class: 0
+|--- color_intensity >  3.82
+|   |--- flavanoids <= 1.58
+|   |   |--- class: 2
+|   |--- flavanoids >  1.58
+|   |   |--- class: 0
+
+
+
+COMPARACIÓN DE max_depth
+======================================================================
+max_depth = 1
+Precisión en datos de prueba: 0.5833 (58.33%)
+
+Reglas aprendidas:
+|--- color_intensity <= 3.82
+|   |--- class: 1
+|--- color_intensity >  3.82
+|   |--- class: 0
+
+======================================================================
+max_depth = 2
+Precisión en datos de prueba: 0.8611 (86.11%)
+
+Reglas aprendidas:
+|--- color_intensity <= 3.82
+|   |--- ash <= 3.00
+|   |   |--- class: 1
+|   |--- ash >  3.00
+|   |   |--- class: 0
+|--- color_intensity >  3.82
+|   |--- flavanoids <= 1.58
+|   |   |--- class: 2
+|   |--- flavanoids >  1.58
+|   |   |--- class: 0
+
+======================================================================
+max_depth = 3
+Precisión en datos de prueba: 0.9444 (94.44%)
+
+Reglas aprendidas:
+|--- color_intensity <= 3.82
+|   |--- ash <= 3.00
+|   |   |--- od280/od315_of_diluted_wines <= 3.73
+|   |   |   |--- class: 1
+|   |   |--- od280/od315_of_diluted_wines >  3.73
+|   |   |   |--- class: 0
+|   |--- ash >  3.00
+|   |   |--- class: 0
+|--- color_intensity >  3.82
+|   |--- flavanoids <= 1.58
+|   |   |--- alcalinity_of_ash <= 17.65
+|   |   |   |--- class: 1
+|   |   |--- alcalinity_of_ash >  17.65
+|   |   |   |--- class: 2
+|   |--- flavanoids >  1.58
+|   |   |--- proline <= 724.50
+|   |   |   |--- class: 1
+|   |   |--- proline >  724.50
+|   |   |   |--- class: 0
+
+======================================================================
+max_depth = 4
+Precisión en datos de prueba: 0.9444 (94.44%)
+
+Reglas aprendidas:
+|--- color_intensity <= 3.82
+|   |--- ash <= 3.00
+|   |   |--- od280/od315_of_diluted_wines <= 3.73
+|   |   |   |--- class: 1
+|   |   |--- od280/od315_of_diluted_wines >  3.73
+|   |   |   |--- class: 0
+|   |--- ash >  3.00
+|   |   |--- class: 0
+|--- color_intensity >  3.82
+|   |--- flavanoids <= 1.58
+|   |   |--- alcalinity_of_ash <= 17.65
+|   |   |   |--- class: 1
+|   |   |--- alcalinity_of_ash >  17.65
+|   |   |   |--- class: 2
+|   |--- flavanoids >  1.58
+|   |   |--- proline <= 724.50
+|   |   |   |--- malic_acid <= 3.92
+|   |   |   |   |--- class: 1
+|   |   |   |--- malic_acid >  3.92
+|   |   |   |   |--- class: 0
+|   |   |--- proline >  724.50
+|   |   |   |--- class: 0
+
+======================================================================
+max_depth = 5
+Precisión en datos de prueba: 0.9444 (94.44%)
+
+Reglas aprendidas:
+|--- color_intensity <= 3.82
+|   |--- ash <= 3.00
+|   |   |--- od280/od315_of_diluted_wines <= 3.73
+|   |   |   |--- class: 1
+|   |   |--- od280/od315_of_diluted_wines >  3.73
+|   |   |   |--- class: 0
+|   |--- ash >  3.00
+|   |   |--- class: 0
+|--- color_intensity >  3.82
+|   |--- flavanoids <= 1.58
+|   |   |--- alcalinity_of_ash <= 17.65
+|   |   |   |--- class: 1
+|   |   |--- alcalinity_of_ash >  17.65
+|   |   |   |--- class: 2
+|   |--- flavanoids >  1.58
+|   |   |--- proline <= 724.50
+|   |   |   |--- malic_acid <= 3.92
+|   |   |   |   |--- class: 1
+|   |   |   |--- malic_acid >  3.92
+|   |   |   |   |--- class: 0
+|   |   |--- proline >  724.50
+|   |   |   |--- class: 0
+
+======================================================================
+max_depth = None
+Precisión en datos de prueba: 0.9444 (94.44%)
+
+Reglas aprendidas:
+|--- color_intensity <= 3.82
+|   |--- ash <= 3.00
+|   |   |--- od280/od315_of_diluted_wines <= 3.73
+|   |   |   |--- class: 1
+|   |   |--- od280/od315_of_diluted_wines >  3.73
+|   |   |   |--- class: 0
+|   |--- ash >  3.00
+|   |   |--- class: 0
+|--- color_intensity >  3.82
+|   |--- flavanoids <= 1.58
+|   |   |--- alcalinity_of_ash <= 17.65
+|   |   |   |--- class: 1
+|   |   |--- alcalinity_of_ash >  17.65
+|   |   |   |--- class: 2
+|   |--- flavanoids >  1.58
+|   |   |--- proline <= 724.50
+|   |   |   |--- malic_acid <= 3.92
+|   |   |   |   |--- class: 1
+|   |   |   |--- malic_acid >  3.92
+|   |   |   |   |--- class: 0
+|   |   |--- proline >  724.50
+|   |   |   |--- class: 0
+
+
+RESUMEN
+max_depth | precisión | profundidad_real | hojas
+-------------------------------------------------------
+        1 | 0.5833    |                1 |     2
+        2 | 0.8611    |                2 |     4
+        3 | 0.9444    |                3 |     7
+        4 | 0.9444    |                4 |     8
+        5 | 0.9444    |                4 |     8
+     None | 0.9444    |                4 |     8
+
+--- STDERR ---
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/generated/interface/models.py", line 32317, in hydrate_crdt_from_proto
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/remote.py", line 749, in __call__
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.

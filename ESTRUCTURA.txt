@@ -1,0 +1,11 @@
+PROYECTO: Clasificación con Árbol de Decisión - Wine Dataset
+
+Archivos:
+- main.py: código principal de entrenamiento, evaluación y comparación de profundidades.
+- README.md: explicación, resultados esperados, observaciones y respuestas de la actividad.
+- requirements.txt: dependencia necesaria.
+- ejecutar.bat: ejecución rápida en Windows.
+- .gitignore: archivos que no deben subirse al repositorio.
+
+Nota:
+La actividad pide subir el archivo Python a un repositorio. Este proyecto está preparado para Git/GitHub.
